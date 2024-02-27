@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-bottom: 1px solid #e7e3e3;
+    align-items: center;
+
+}
+header .logo img{
+    width: 90px;
+    height: auto;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a{
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+}
+nav ul li a:hover{
+    color: #8d3bfb;
+}
