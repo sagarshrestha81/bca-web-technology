@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .input-button-wrapper {
+            display: flex;
+            gap: 5px;
+        }
+      
+    </style>
+
+
+<fieldset>
+    <legend>register</legend>
+
+<form action="" method="get" onsubmit="return submitFunction();" id="myform">
+    <div class="input-wrapper">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="ex. abc@example.com" onkeypress="userInput();">
+    </div>
+    <div class="input-wrapper">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+    <div class="input-wrapper">
+            <label for="test">check</label>
+            <input type="text" id="test" name="test" required>
+    
+        </div>
+        <div class="input-wrapper-radio">
+            <!-- <label for="password">Password</label> -->
+            
+            
+            <label ><input type="radio"  name="gender" > male</label>
+            
+            
+                <label > <input type="radio"  name="gender" > female</label>
+                
+            </div>
+            <small id="message"></small>
+            <div class="input-button-wrapper">
+                <button type="submit"  >Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+            
+        </form>
+    </fieldset>
+  
+    <script>
+        function userInput(){
+            email = document.getElementById("myform").email.value;
+            console.log(email);
+            // message = document.getElementById("message");
+            // message.innerHTML = "";
+            // if(email== 'sagar@gmail.com'){
+            //     message.innerHTML = "email already exists";
+            // }
+        }
+        function submitFunction() {
+            email = document.getElementById("myform").email.value;
+            password = document.getElementById("myform").password.value;
+            
+            isValidate=false;
+            if (email == "" && password == "") {
+                message.innerHTML = "please enter email and password";              
+            } else if (email != "" && password == "") {
+                message.innerHTML = "please enter password";
+            } else if (email == "" && password != "") {
+                message.innerHTML = "please enter email";
+            } else {
+                isValidate=true; 
+            }
+            return isValidate;
+        }
+    </script>
+
+</body>
+
+</html>

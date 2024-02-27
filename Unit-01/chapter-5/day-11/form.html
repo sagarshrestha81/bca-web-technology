@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .input-button-wrapper {
+            display: flex;
+            gap: 5px;
+        }
+        .box{
+width: 100px;
+height: 100px;
+background: #ff0000;
+margin:10px;
+        }
+    </style>
+
+<div class="boxes">
+<div class="box">
+
+</div>
+<div class="box">
+
+</div>
+<div class="box">
+
+</div>
+<div class="box">
+
+</div>
+<div class="box">
+
+</div>
+<div class="box">
+
+</div>
+</div>
+
+<fieldset>
+    <legend>register</legend>
+
+<form action="" method="get" onsubmit="return submitFunction();" id="myform">
+    <div class="input-wrapper">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="ex. abc@example.com">
+    </div>
+    <div class="input-wrapper">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="input-wrapper-radio">
+            <!-- <label for="password">Password</label> -->
+            
+            
+            <label ><input type="radio"  name="gender" > male</label>
+            
+            
+                <label > <input type="radio"  name="gender" > female</label>
+                
+            </div>
+            <small id="message"></small>
+            <div class="input-button-wrapper">
+                <button type="submit"  >Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+            
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>login</legend>
+    
+        <form action="" method="get" onsubmit="return submitFunction();" id="myform">
+        <div class="input-wrapper">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="ex. abc@example.com">
+        </div>
+        <div class="input-wrapper">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="input-wrapper-radio">
+            <!-- <label for="password">Password</label> -->
+         
+                
+                <label ><input type="radio"  name="gender" > male</label>
+           
+               
+                <label > <input type="radio"  name="gender" > female</label>
+          
+        </div>
+        <small id="message"></small>
+        <div class="input-button-wrapper">
+            <button type="submit"  >Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+</fieldset>
+    <script>
+        function submitFunction() {
+            email = document.getElementById("myform").email.value;
+            password = document.getElementById("myform").password.value;
+            message = document.getElementById("message");
+            message.innerHTML = "";
+            isValidate=false;
+            if (email == "" && password == "") {
+                message.innerHTML = "please enter email and password";              
+            } else if (email != "" && password == "") {
+                message.innerHTML = "please enter password";
+            } else if (email == "" && password != "") {
+                message.innerHTML = "please enter email";
+            } else {
+                isValidate=true; 
+            }
+            return isValidate;
+        }
+    </script>
+
+</body>
+
+</html>
