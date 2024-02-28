@@ -50,15 +50,18 @@ section{
     width: 300px;
     border-radius: 8px;
     transition: all ease .3s;
+    flex: auto;
 }
 .cart .main-image{
-    width: 300px;
+    min-width: 300px;
+    width: 100%;
     height: 300px;
     border-radius: 8px;
     overflow: hidden;
 }
 .cart .main-image img{
-    width: 300px;
+    min-width: 300px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
     transition: all ease .3s;
